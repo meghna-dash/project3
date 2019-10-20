@@ -1,0 +1,283 @@
+This file contains any messages produced by compilers while
+running configure, to aid debugging if configure makes a mistake.
+
+configure:562: checking for a BSD compatible install
+configure:616: checking how to run the C preprocessor
+configure:637: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:677: checking whether make sets ${MAKE}
+configure:706: checking for gcc
+configure:783: checking whether the C compiler (gcc -g -O2 -Wno-error  ) works
+configure:797: gcc -o conftest -g -O2 -Wno-error    conftest.c  1>&5
+configure:794:1: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+main(){return(0);}
+^
+1 warning generated.
+configure:817: checking whether the C compiler (gcc -g -O2 -Wno-error  ) is a cross-compiler
+configure:822: checking whether we are using GNU C
+configure:831: gcc -E conftest.c
+configure:846: checking whether gcc accepts -g
+configure:876: checking for ranlib
+configure:903: checking for POSIXized ISC
+configure:924: checking for ANSI C header files
+configure:937: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:1004: gcc -o conftest -g -O2 -Wno-error    conftest.c  1>&5
+configure:999:67: warning: implicitly declaring library function 'exit' with type 'void (int) __attribute__((noreturn))' [-Wimplicit-function-declaration]
+if (XOR (islower (i), ISLOWER (i)) || toupper (i) != TOUPPER (i)) exit(2);
+                                                                  ^
+configure:999:67: note: include the header <stdlib.h> or explicitly provide a declaration for 'exit'
+1 warning generated.
+configure:1028: checking for working const
+configure:1082: gcc -c -g -O2 -Wno-error   conftest.c 1>&5
+configure:1103: checking for inline
+configure:1117: gcc -c -g -O2 -Wno-error   conftest.c 1>&5
+configure:1113:10: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+} inline foo() {
+  ~~~~~~ ^
+1 warning generated.
+configure:1143: checking for off_t
+configure:1176: checking for size_t
+configure:1211: checking for working alloca.h
+configure:1223: gcc -o conftest -g -O2 -Wno-error    conftest.c  1>&5
+configure:1244: checking for alloca
+configure:1272: gcc -o conftest -g -O2 -Wno-error    conftest.c  1>&5
+configure:1441: checking for unistd.h
+configure:1451: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:1480: checking for getpagesize
+configure:1508: gcc -o conftest -g -O2 -Wno-error    conftest.c  1>&5
+configure:1533: checking for working mmap
+configure:1681: gcc -o conftest -g -O2 -Wno-error    conftest.c  1>&5
+configure:1612:7: warning: incompatible redeclaration of library function 'malloc' [-Wincompatible-library-redeclaration]
+char *malloc();
+      ^
+configure:1612:7: note: 'malloc' is a builtin with type 'void *(unsigned long)'
+configure:1622:13: warning: implicit declaration of function 'getpagesize' is invalid in C99 [-Wimplicit-function-declaration]
+        pagesize = getpagesize();
+                   ^
+configure:1629:3: warning: implicitly declaring library function 'exit' with type 'void (int) __attribute__((noreturn))' [-Wimplicit-function-declaration]
+                exit(1);
+                ^
+configure:1629:3: note: include the header <stdlib.h> or explicitly provide a declaration for 'exit'
+configure:1631:17: warning: implicit declaration of function 'rand' is invalid in C99 [-Wimplicit-function-declaration]
+                *(data + i) = rand();
+                              ^
+configure:1632:2: warning: implicit declaration of function 'umask' is invalid in C99 [-Wimplicit-function-declaration]
+        umask(0);
+        ^
+configure:1636:6: warning: implicit declaration of function 'write' is invalid in C99 [-Wimplicit-function-declaration]
+        if (write(fd, data, pagesize) != pagesize)
+            ^
+configure:1638:2: warning: implicit declaration of function 'close' is invalid in C99 [-Wimplicit-function-declaration]
+        close(fd);
+        ^
+configure:1669:6: warning: implicit declaration of function 'read' is invalid in C99 [-Wimplicit-function-declaration]
+        if (read(fd, data3, pagesize) != pagesize)
+            ^
+configure:1675:2: warning: implicit declaration of function 'unlink' is invalid in C99 [-Wimplicit-function-declaration]
+        unlink("conftestmmap");
+        ^
+9 warnings generated.
+configure:1709: checking for argz.h
+configure:1719: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:1715:10: fatal error: 'argz.h' file not found
+#include <argz.h>
+         ^~~~~~~~
+1 error generated.
+configure: failed program was:
+#line 1714 "configure"
+#include "confdefs.h"
+#include <argz.h>
+configure:1709: checking for limits.h
+configure:1719: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:1709: checking for locale.h
+configure:1719: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:1709: checking for nl_types.h
+configure:1719: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:1709: checking for malloc.h
+configure:1719: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:1715:10: fatal error: 'malloc.h' file not found
+#include <malloc.h>
+         ^~~~~~~~~~
+1 error generated.
+configure: failed program was:
+#line 1714 "configure"
+#include "confdefs.h"
+#include <malloc.h>
+configure:1709: checking for string.h
+configure:1719: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:1709: checking for unistd.h
+configure:1709: checking for values.h
+configure:1719: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:1715:10: fatal error: 'values.h' file not found
+#include <values.h>
+         ^~~~~~~~~~
+1 error generated.
+configure: failed program was:
+#line 1714 "configure"
+#include "confdefs.h"
+#include <values.h>
+configure:1709: checking for sys/param.h
+configure:1719: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:1749: checking for getcwd
+configure:1777: gcc -o conftest -g -O2 -Wno-error    conftest.c  1>&5
+configure:1749: checking for munmap
+configure:1777: gcc -o conftest -g -O2 -Wno-error    conftest.c  1>&5
+configure:1749: checking for putenv
+configure:1777: gcc -o conftest -g -O2 -Wno-error    conftest.c  1>&5
+configure:1749: checking for setenv
+configure:1777: gcc -o conftest -g -O2 -Wno-error    conftest.c  1>&5
+configure:1749: checking for setlocale
+configure:1777: gcc -o conftest -g -O2 -Wno-error    conftest.c  1>&5
+configure:1749: checking for strchr
+configure:1777: gcc -o conftest -g -O2 -Wno-error    conftest.c  1>&5
+configure:1761:6: warning: incompatible redeclaration of library function 'strchr' [-Wincompatible-library-redeclaration]
+char strchr();
+     ^
+configure:1761:6: note: 'strchr' is a builtin with type 'char *(const char *, int)'
+1 warning generated.
+configure:1749: checking for strcasecmp
+configure:1777: gcc -o conftest -g -O2 -Wno-error    conftest.c  1>&5
+configure:1761:6: warning: incompatible redeclaration of library function 'strcasecmp' [-Wincompatible-library-redeclaration]
+char strcasecmp();
+     ^
+configure:1761:6: note: 'strcasecmp' is a builtin with type 'int (const char *, const char *)'
+1 warning generated.
+configure:1749: checking for __argz_count
+configure:1777: gcc -o conftest -g -O2 -Wno-error    conftest.c  1>&5
+Undefined symbols for architecture x86_64:
+  "___argz_count", referenced from:
+      _main in conftest-98d23e.o
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+configure: failed program was:
+#line 1754 "configure"
+#include "confdefs.h"
+/* System header to define __stub macros and hopefully few prototypes,
+    which can conflict with char __argz_count(); below.  */
+#include <assert.h>
+/* Override any gcc2 internal prototype to avoid an error.  */
+/* We use char because int might match the return type of a gcc2
+    builtin and then its argument prototype would still apply.  */
+char __argz_count();
+
+int main() {
+
+/* The GNU C library defines this for functions which it implements
+    to always fail with ENOSYS.  Some functions are actually named
+    something starting with __ and the normal name is an alias.  */
+#if defined (__stub___argz_count) || defined (__stub_____argz_count)
+choke me
+#else
+__argz_count();
+#endif
+
+; return 0; }
+configure:1749: checking for __argz_stringify
+configure:1777: gcc -o conftest -g -O2 -Wno-error    conftest.c  1>&5
+Undefined symbols for architecture x86_64:
+  "___argz_stringify", referenced from:
+      _main in conftest-245553.o
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+configure: failed program was:
+#line 1754 "configure"
+#include "confdefs.h"
+/* System header to define __stub macros and hopefully few prototypes,
+    which can conflict with char __argz_stringify(); below.  */
+#include <assert.h>
+/* Override any gcc2 internal prototype to avoid an error.  */
+/* We use char because int might match the return type of a gcc2
+    builtin and then its argument prototype would still apply.  */
+char __argz_stringify();
+
+int main() {
+
+/* The GNU C library defines this for functions which it implements
+    to always fail with ENOSYS.  Some functions are actually named
+    something starting with __ and the normal name is an alias.  */
+#if defined (__stub___argz_stringify) || defined (__stub_____argz_stringify)
+choke me
+#else
+__argz_stringify();
+#endif
+
+; return 0; }
+configure:1749: checking for __argz_next
+configure:1777: gcc -o conftest -g -O2 -Wno-error    conftest.c  1>&5
+Undefined symbols for architecture x86_64:
+  "___argz_next", referenced from:
+      _main in conftest-238363.o
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+configure: failed program was:
+#line 1754 "configure"
+#include "confdefs.h"
+/* System header to define __stub macros and hopefully few prototypes,
+    which can conflict with char __argz_next(); below.  */
+#include <assert.h>
+/* Override any gcc2 internal prototype to avoid an error.  */
+/* We use char because int might match the return type of a gcc2
+    builtin and then its argument prototype would still apply.  */
+char __argz_next();
+
+int main() {
+
+/* The GNU C library defines this for functions which it implements
+    to always fail with ENOSYS.  Some functions are actually named
+    something starting with __ and the normal name is an alias.  */
+#if defined (__stub___argz_next) || defined (__stub_____argz_next)
+choke me
+#else
+__argz_next();
+#endif
+
+; return 0; }
+configure:1806: checking for stpcpy
+configure:1834: gcc -o conftest -g -O2 -Wno-error    conftest.c  1>&5
+configure:1818:6: warning: incompatible redeclaration of library function 'stpcpy' [-Wincompatible-library-redeclaration]
+char stpcpy();
+     ^
+configure:1818:6: note: 'stpcpy' is a builtin with type 'char *(char *, const char *)'
+1 warning generated.
+configure:1868: checking for LC_MESSAGES
+configure:1880: gcc -o conftest -g -O2 -Wno-error    conftest.c  1>&5
+configure:1901: checking whether NLS is requested
+configure:1921: checking whether included gettext is requested
+configure:1940: checking for libintl.h
+configure:1950: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:1967: checking for gettext in libc
+configure:1979: gcc -o conftest -g -O2 -Wno-error    conftest.c  1>&5
+Undefined symbols for architecture x86_64:
+  "_libintl_gettext", referenced from:
+      _main in conftest-ed3c06.o
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+configure: failed program was:
+#line 1972 "configure"
+#include "confdefs.h"
+#include <libintl.h>
+int main() {
+return (int) gettext ("")
+; return 0; }
+configure:1995: checking for bindtextdomain in -lintl
+configure:2014: gcc -o conftest -g -O2 -Wno-error    conftest.c -lintl   1>&5
+configure:2030: checking for gettext in libintl
+configure:2042: gcc -o conftest -g -O2 -Wno-error    conftest.c  1>&5
+configure:2038:14: warning: implicit declaration of function 'gettext' is invalid in C99 [-Wimplicit-function-declaration]
+return (int) gettext ("")
+             ^
+1 warning generated.
+Undefined symbols for architecture x86_64:
+  "_gettext", referenced from:
+      _main in conftest-8e929b.o
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+configure: failed program was:
+#line 2035 "configure"
+#include "confdefs.h"
+
+int main() {
+return (int) gettext ("")
+; return 0; }
+configure:2266: checking for msgfmt
+configure:2300: checking for gmsgfmt
+configure:2335: checking for xgettext
