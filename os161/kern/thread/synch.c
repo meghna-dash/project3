@@ -49,7 +49,7 @@ sem_destroy(struct semaphore *sem)
 	 * the semaphore after the above test but before we free it,
 	 * if they're going to do that, they can just as easily wait
 	 * a bit and start sleeping on the semaphore after it's been
-	 * freed. Consequently, there's not a whole lot of point in 
+	 * freed. Consequently, there's not a whole lot of point in
 	 * including the kfrees in the splhigh block, so we don't.
 	 */
 
@@ -57,7 +57,7 @@ sem_destroy(struct semaphore *sem)
 	kfree(sem);
 }
 
-void 
+void
 P(struct semaphore *sem)
 {
 	int spl;
@@ -111,9 +111,10 @@ lock_create(const char *name)
 		kfree(lock);
 		return NULL;
 	}
-	
+
 	// add stuff here as needed
-	
+  lock->holder = NULL;
+
 	return lock;
 }
 
@@ -123,7 +124,7 @@ lock_destroy(struct lock *lock)
 	assert(lock != NULL);
 
 	// add stuff here as needed
-	
+
 	kfree(lock->name);
 	kfree(lock);
 }
@@ -132,6 +133,14 @@ void
 lock_acquire(struct lock *lock)
 {
 	// Write this
+	// check that the lock does not equal NULL
+	assert (lock != NULL);
+
+	while (lock -> holder != NULL) {
+		thread_sleep(lock);
+	}
+
+	lock -> holder = curthread;
 
 	(void)lock;  // suppress warning until code gets written
 }
@@ -140,6 +149,11 @@ void
 lock_release(struct lock *lock)
 {
 	// Write this
+	// check that the lock does not equal NULL
+	assert (lock != NULL);
+
+	// release the lock
+	lock -> holder = NULL;
 
 	(void)lock;  // suppress warning until code gets written
 }
@@ -148,10 +162,15 @@ int
 lock_do_i_hold(struct lock *lock)
 {
 	// Write this
+	assert(lock != NULL);
+
+	int msg = (lock->holder == curthread);
+
+	return msg;
 
 	(void)lock;  // suppress warning until code gets written
 
-	return 1;    // dummy until code gets written
+	// return 1;    // dummy until code gets written
 }
 
 ////////////////////////////////////////////////////////////
@@ -174,9 +193,9 @@ cv_create(const char *name)
 		kfree(cv);
 		return NULL;
 	}
-	
+
 	// add stuff here as needed
-	
+
 	return cv;
 }
 
@@ -186,7 +205,7 @@ cv_destroy(struct cv *cv)
 	assert(cv != NULL);
 
 	// add stuff here as needed
-	
+
 	kfree(cv->name);
 	kfree(cv);
 }
@@ -195,6 +214,7 @@ void
 cv_wait(struct cv *cv, struct lock *lock)
 {
 	// Write this
+
 	(void)cv;    // suppress warning until code gets written
 	(void)lock;  // suppress warning until code gets written
 }
@@ -203,6 +223,7 @@ void
 cv_signal(struct cv *cv, struct lock *lock)
 {
 	// Write this
+
 	(void)cv;    // suppress warning until code gets written
 	(void)lock;  // suppress warning until code gets written
 }
