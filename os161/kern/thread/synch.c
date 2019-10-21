@@ -217,6 +217,13 @@ cv_wait(struct cv *cv, struct lock *lock)
 
 	(void)cv;    // suppress warning until code gets written
 	(void)lock;  // suppress warning until code gets written
+
+	// 1) Release lock.
+	lock_release(lock);
+	// 2) Put the thread to sleep until cv is signaled.
+	thread_sleep(cv->name);
+	// 3) When thread wakes up again, re-acquire lock before returning.
+	lock_acquire(lock);
 }
 
 void
@@ -226,12 +233,20 @@ cv_signal(struct cv *cv, struct lock *lock)
 
 	(void)cv;    // suppress warning until code gets written
 	(void)lock;  // suppress warning until code gets written
+
+	// 1) If any threads are waiting on cv, wake up one of them.
+	// 2) Caller must hold the lock.
+	thread_wakeup(cv->name);
 }
 
 void
 cv_broadcast(struct cv *cv, struct lock *lock)
 {
 	// Write this
+
 	(void)cv;    // suppress warning until code gets written
 	(void)lock;  // suppress warning until code gets written
+
+	// 1) Wake up all waiting threads.
+	thread_wakeup(cv->name);
 }
